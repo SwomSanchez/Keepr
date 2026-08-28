@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Keepr</string>
+    <string name="accessibility_service_description">Keepr 120Hz Yenileme Hızı Yöneticisi. Seçilen hedef uygulamalar açıldığında veya global modda ekran yenileme hızının 60Hz\'e düşürülmesini engeller ve 120Hz\'e sabitler.</string>
+    <string name="notification_channel_name">Keepr 120Hz Kalıcılık Servisi</string>
+    <string name="notification_channel_desc">Keepr servisinin arka planda sonlandırılmasını önler.</string>
+    <string name="notification_title">Keepr 120Hz Aktif</string>
+    <string name="notification_text">Ekran yenileme hızı koruması devrede.</string>
+
+    <!-- Global Mode -->
+    <string name="global_mode_title">Tüm Sistem 120Hz Koruması</string>
+    <string name="global_mode_desc">60Hz\'e düşüş anında algılanıp tüm cihazda 120Hz kilitlenir</string>
+    <string name="global_mode_notice">Tüm sistem koruması devrede olduğu için aşağıdaki tüm uygulamalar otomatik 120Hz çalışır.</string>
+
+    <!-- Apps Tab & Search -->
+    <string name="search_hint">Uygulama ara…</string>
+    <string name="clear_search">Aramayı Temizle</string>
+    <string name="filter_button_desc">Filtrele</string>
+    <string name="loading_apps">YÜKLENİYOR…</string>
+    <string name="app_count_format">%1$d UYGULAMA</string>
+    <string name="filter_all">Tümü</string>
+    <string name="filter_active">Aktif</string>
+
+    <!-- Filter Bottom Sheet -->
+    <string name="filter_title">Filtrele</string>
+    <string name="filter_all_apps">Tüm Uygulamalar</string>
+    <string name="filter_active_only">Aktif Olanlar</string>
+    <string name="btn_enable_all">Tümünü Aç</string>
+    <string name="btn_disable_all">Tümünü Kapat</string>
+
+    <!-- Settings Section -->
+    <string name="section_settings">AYARLAR</string>
+    <string name="setting_language_title">Uygulama Dili</string>
+    <string name="dialog_language_title">Uygulama Dili</string>
+    <string name="lang_english">English</string>
+    <string name="lang_english_desc">English (United States)</string>
+    <string name="lang_turkish">Türkçe</string>
+    <string name="lang_turkish_desc">Türkçe (Türkiye)</string>
+    <string name="lang_system_default">Sistem Varsayılanı</string>
+    <string name="lang_system_default_desc">Cihazın sistem dilini takip eder</string>
+
+    <!-- Permissions Tab -->
+    <string name="section_permissions">GEREKLİ İZİNLER</string>
+    <string name="perm_autostart_title">Otomatik Başlatma</string>
+    <string name="perm_autostart_desc">Yeniden başlatmada otomatik çalışır</string>
+    <string name="perm_a11y_title">Erişilebilirlik Servisi</string>
+    <string name="perm_a11y_desc">Ön plan uygulamaları anlık algılar</string>
+    <string name="perm_write_settings_title">Sistem Ayarlarını Değiştirme</string>
+    <string name="perm_write_settings_desc">Ekran yenileme hızını 120Hz olarak ayarlar</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_apps">Uygulamalar</string>
+    <string name="nav_permissions">Ayarlar</string>
+
+    <!-- Toast & Messages -->
+    <string name="toast_open_settings_error">Uygulama ayarları açılamadı.</string>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Keepr</string>
+    <string name="accessibility_service_description">Keepr 120Hz Refresh Rate Manager. Prevents the screen refresh rate from dropping to 60Hz and enforces 120Hz across targeted apps or globally.</string>
+    <string name="notification_channel_name">Keepr 120Hz Persistence Service</string>
+    <string name="notification_channel_desc">Prevents the Keepr background service from being killed by the OS.</string>
+    <string name="notification_title">Keepr 120Hz Active</string>
+    <string name="notification_text">Refresh rate protection is active.</string>
+
+    <!-- Global Mode -->
+    <string name="global_mode_title">Global 120Hz Protection</string>
+    <string name="global_mode_desc">Instantly locks 120Hz system-wide when drops occur</string>
+    <string name="global_mode_notice">All apps below automatically run at 120Hz while Global Mode is active.</string>
+
+    <!-- Apps Tab & Search -->
+    <string name="search_hint">Search apps…</string>
+    <string name="clear_search">Clear search</string>
+    <string name="filter_button_desc">Filter</string>
+    <string name="loading_apps">LOADING…</string>
+    <string name="app_count_format">%1$d APPS</string>
+    <string name="filter_all">All</string>
+    <string name="filter_active">Active</string>
+
+    <!-- Filter Bottom Sheet -->
+    <string name="filter_title">Filter</string>
+    <string name="filter_all_apps">All Apps</string>
+    <string name="filter_active_only">Active Only</string>
+    <string name="btn_enable_all">Enable All</string>
+    <string name="btn_disable_all">Disable All</string>
+
+    <!-- Settings Section -->
+    <string name="section_settings">SETTINGS</string>
+    <string name="setting_language_title">App Language</string>
+    <string name="dialog_language_title">App Language</string>
+    <string name="lang_english">English</string>
+    <string name="lang_english_desc">English (United States)</string>
+    <string name="lang_turkish">Türkçe</string>
+    <string name="lang_turkish_desc">Türkçe (Türkiye)</string>
+    <string name="lang_system_default">System Default</string>
+    <string name="lang_system_default_desc">Follow device system language</string>
+
+    <!-- Permissions Tab -->
+    <string name="section_permissions">REQUIRED PERMISSIONS</string>
+    <string name="perm_autostart_title">Autostart</string>
+    <string name="perm_autostart_desc">Starts automatically on device reboot</string>
+    <string name="perm_a11y_title">Accessibility Service</string>
+    <string name="perm_a11y_desc">Real-time foreground app detection</string>
+    <string name="perm_write_settings_title">Modify System Settings</string>
+    <string name="perm_write_settings_desc">Grants permission to force 120Hz display rate</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_apps">Apps</string>
+    <string name="nav_permissions">Settings</string>
+
+    <!-- Toast & Messages -->
+    <string name="toast_open_settings_error">Failed to open application settings.</string>
+</resources>

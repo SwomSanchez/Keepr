@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Soft Dark Grey Palette (Minimalist) -->
+    <color name="bg_dark">#131316</color>
+    <color name="bg_card_base">#1B1B1F</color>
+    <color name="bg_card_surface">#232329</color>
+    <color name="bg_card_stroke">#2A2A32</color>
+    <color name="bg_pill">#2C2C34</color>
+
+    <color name="primary_cyan">#38BDF8</color>
+    <color name="primary_blue">#0A84FF</color>
+    <color name="accent_emerald">#34C759</color>
+    <color name="accent_rose">#FF453A</color>
+    <color name="accent_amber">#FF9F0A</color>
+
+    <color name="text_primary">#F2F2F5</color>
+    <color name="text_secondary">#9B9BA6</color>
+    <color name="text_muted">#636370</color>
+
+    <color name="status_active">#34C759</color>
+    <color name="status_inactive">#FF453A</color>
+    <color name="status_warning">#FF9F0A</color>
+</resources>

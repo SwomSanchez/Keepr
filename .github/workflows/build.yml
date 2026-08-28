@@ -1,0 +1,76 @@
+name: Build & Release APK
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    tags:
+      - 'v*'
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: 🔨 Build Android APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: ☕ Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: 📱 Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: 🐘 Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: 🔑 Grant Execute Permission for Gradlew
+        run: chmod +x gradlew
+
+      - name: 🏗️ Build Debug APK
+        run: ./gradlew :app:assembleDebug --stacktrace --no-daemon
+
+      - name: 📦 Prepare APK Artifacts
+        run: |
+          mkdir -p artifacts
+          echo "Searching for generated APK files..."
+          find . -name "*.apk"
+          APK_PATH=$(find . -type f -name "*debug*.apk" -o -name "*.apk" | head -n 1)
+          if [ -n "$APK_PATH" ]; then
+            cp "$APK_PATH" artifacts/Keepr-debug.apk
+            echo "Debug APK successfully prepared from $APK_PATH to artifacts/Keepr-debug.apk"
+          else
+            echo "Error: No APK file generated!"
+            exit 1
+          fi
+
+      - name: 📤 Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Keepr-debug-apk
+          path: artifacts/Keepr-debug.apk
+          retention-days: 30
+
+      - name: 🚀 Create GitHub Release & Upload APK
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: artifacts/Keepr-debug.apk
+          name: Keepr Release ${{ github.ref_name }}
+          tag_name: ${{ github.ref }}
+          generate_release_notes: true
+          draft: false
+          prerelease: false
